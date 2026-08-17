@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Cupcake Shop</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../capcake_logo.png" alt="Logo Cupcake Shop" class="logo">
+            <a href="../produtos/produtos.html" class="site-title">Cupcake BR</a>
+            <a href="../produtos/produtos.html">Produtos</a>
+            <a href="../login/login.html">Login</a>
+            <button id="logoutBtn" class="nav-link" style="display: none;">Logout</button>
+        </nav>
+    </header>
+
+    <h1>Carrinho de Compras</h1>
+
+    <div id="carrinho-container">
+        <!-- Produtos do carrinho serão carregados aqui dinamicamente -->
+    </div>
+
+    <!-- Botão Finalizar Compra, inicialmente escondido -->
+    <div id="finalizar-compra-container" style="display: none;">
+        <a href="../checkout/checkout.html">
+            <button class="btn-finalizar-compra">Finalizar Compra</button>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cupcake BR</p>
+    </footer>
+
+    <script src="carrinho.js"></script>
+</body>
+</html>

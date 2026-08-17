@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000000;
+    padding: 10px;
+    margin: 0;
+    height: auto;
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: space-between; /* Coloca os itens à esquerda e à direita */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.site-title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+
+    text-transform: uppercase; /* Texto em maiúsculas para destaque */
+}
+
+
+/* Se você tiver um menu ou links à esquerda */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    background-color: #000000;
+}
+
+header nav .logo {
+    width: 80px;
+    height: auto;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px; /* Adiciona preenchimento para clique mais confortável */
+    border-radius: 5px; /* Arredonda os links */
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #444444; /* Destaque ao passar o mouse */
+}
+
+header nav .nav-link {
+    color: white;
+    text-decoration: none; /* Sem sublinhado */
+    padding: 5px 10px; /* Adiciona preenchimento para clique confortável */
+    border-radius: 5px; /* Arredondamento nas bordas */
+    transition: background-color 0.3s ease; /* Transição suave */
+    background-color: transparent; /* Fundo transparente por padrão */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de clique */
+}
+
+header nav .nav-link:hover {
+    background-color: #444444; /* Cor de fundo ao passar o mouse */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#carrinho-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho-vazio {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.produto-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; /* Aumenta o espaço entre os cards */
+    padding: 20px; /* Adiciona mais preenchimento dentro do card */
+    border-bottom: 2px solid #ddd; /* Linha inferior mais visível */
+    background-color: #fefefe; /* Adiciona um fundo claro */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destaque */
+}
+
+.produto-carrinho img {
+    width: 150px; /* Aumenta o tamanho da imagem */
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto-info {
+    flex-grow: 1;
+    padding: 0 30px; /* Aumenta o espaço entre a imagem e o texto */
+}
+
+.produto-info h2 {
+    font-size: 22px; /* Aumenta o tamanho do texto do nome do produto */
+    margin-bottom: 10px;
+}
+
+.produto-info p {
+    font-size: 18px; /* Aumenta o texto das informações */
+    margin: 8px 0;
+}
+
+.produto-info button.btn-quantidade {
+    background-color: #ffec3e;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.produto-info button.btn-quantidade:hover {
+    background-color: #ffd700;
+}
+
+.produto-info button.btn-quantidade:active {
+    background-color: #ffcc00;
+}
+
+.remover-produto {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo do botão Finalizar Compra */
+.btn-finalizar-compra {
+    background-color: #ffec3e; /* Cor de fundo amarela */
+    color: black; /* Texto preto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 12px 24px; /* Padding para aumentar o tamanho do botão */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+    text-align: center; /* Alinha o texto no centro */
+    display: block; /* Exibe o botão como um bloco */
+    margin: 20px auto; /* Espaço ao redor do botão e centraliza */
+    width: 200px; /* Largura fixa para o botão */
+    text-decoration: none; /* Remove o sublinhado caso o botão seja confundido com link */
+}
+
+/* Garantir que qualquer link dentro do botão não tenha sublinhado */
+.btn-finalizar-compra a {
+    text-decoration: none; /* Remove o sublinhado de links dentro do botão */
+}
+
+/* Estilo do botão ao passar o mouse */
+.btn-finalizar-compra:hover {
+    background-color: #ffd700; /* Cor mais escura de amarelo ao passar o mouse */
+}
+
+/* Estilo do botão ao focar (quando o botão é clicado ou navegado com o teclado) */
+.btn-finalizar-compra:focus {
+    outline: 2px solid #ffcc00; /* Bordas douradas para foco */
+    outline-offset: 2px;
+}
+
+/* Estilo opcional de sombra para o botão */
+.btn-finalizar-compra:active {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efeito de clique */
+}
+
+/* Estilo do container do carrinho para garantir que o botão fique abaixo dele */
+#carrinho-container {
+    margin-bottom: 40px; /* Espaço extra abaixo do container para dar espaço ao botão */
+}
+
+
+footer {
+    background-color: #ffec3e;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+}
