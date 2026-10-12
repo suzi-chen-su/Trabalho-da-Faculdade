@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Conta - Delícia de Cupcakes</title>
+
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/conta.css">
+
+</head>
+
+<body>
+
+    <main class="account-container">
+
+        <section class="account-card">
+
+            <h1>Minha Conta</h1>
+
+            <p class="account-welcome">
+                Confira seus dados cadastrados.
+            </p>
+
+
+            <div class="account-info">
+
+                <div class="account-field">
+
+                    <label for="account_name">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="account_name"
+                        disabled>
+
+                </div>
+
+
+            <div class="account-field">
+
+                <label for="account_email">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="account_email"
+                    disabled>
+
+            </div>
+
+
+            <div class="account-field">
+
+                <label for="account_phone">
+                    Telefone
+                </label>
+
+                <input
+                    type="text"
+                    id="account_phone"
+                    disabled>
+
+            </div>
+
+
+            <div class="account-field">
+
+                <label for="account_cep">
+                    CEP
+                </label>
+
+                <input
+                    type="text"
+                    id="account_cep"
+                    placeholder="00000-000"
+                    maxlength="9">
+
+            </div>
+
+
+            <div class="account-field">
+
+                <label for="account_city">
+                    Cidade
+                </label>
+
+                <input
+                    type="text"
+                    id="account_city"
+                    disabled>
+
+            </div>
+
+
+            <div class="account-field">
+
+                <label for="account_state">
+                    Estado
+                </label>
+
+                <input
+                    type="text"
+                    id="account_state"
+                    maxlength="2"
+                    disabled>
+
+            </div>
+
+
+            <div class="account-field">
+
+                <label for="account_address">
+                    Endereço
+                </label>
+
+                <input
+                    type="text"
+                    id="account_address"
+                    disabled>
+
+            </div>
+
+
+            <div class="account-field">
+
+                <label for="account_number">
+                    Número
+                </label>
+
+                <input
+                    type="text"
+                    id="account_number"
+                    disabled>
+
+            </div>
+
+
+            <div class="account-field">
+
+                <label for="account_complement">
+                    Complemento
+                </label>
+
+                <input
+                    type="text"
+                    id="account_complement"
+                    disabled>
+
+            </div>
+
+        </div>
+
+
+            <div class="account-buttons">
+
+                <button
+                    id="edit_account"
+                    class="btn-default">
+
+                    Editar meus dados
+
+                </button>
+
+
+                <button
+                    id="save_account"
+                    class="btn-default"
+                    style="display: none;">
+
+                    Salvar alterações
+
+                </button>
+
+
+                <a  href="index.html"
+                    class="btn-secondary">
+
+                    ← Voltar para a loja
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"
+            integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+    </script>
+
+    <script src="src/javascript/conta.js"></script>
+
+</body>
+
+</html>

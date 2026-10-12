@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo - Delícia de Cupcakes</title>
+
+    <link rel="stylesheet" href="src/styles/admin-dashboard.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         CABEÇALHO
+         ========================================== -->
+
+    <header id="admin_header">
+
+        <div class="admin_logo">
+            Delícia de Cupcakes
+        </div>
+
+        <div class="admin_title">
+            Painel Administrativo
+        </div>
+
+        <button id="logout_button">
+            Sair
+        </button>
+
+    </header>
+
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+         ========================================== -->
+
+    <main id="admin_main">
+
+        <h1>Visão geral</h1>
+
+        <p class="welcome_message">
+            Bem-vindo ao painel administrativo!
+        </p>
+
+
+        <!-- ==========================================
+             CARDS DE RESUMO
+             ========================================== -->
+
+        <section id="summary_cards">
+
+            <div class="summary_card">
+
+                <span class="card_icon">👥</span>
+
+                <div>
+                    <h2>Usuários</h2>
+                    <p id="total_users">0</p>
+                </div>
+
+            </div>
+
+
+            <div class="summary_card">
+
+                <span class="card_icon">📦</span>
+
+                <div>
+                    <h2>Pedidos</h2>
+                    <p id="total_orders">0</p>
+                </div>
+
+            </div>
+
+
+            <div class="summary_card">
+
+                <span class="card_icon">💰</span>
+
+                <div>
+                    <h2>Vendas</h2>
+                    <p id="total_sales">R$ 0,00</p>
+                </div>
+
+            </div>
+
+
+            <div class="summary_card">
+
+                <span class="card_icon">🧁</span>
+
+                <div>
+                    <h2>Produtos</h2>
+                    <p id="total_products">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ÁREAS ADMINISTRATIVAS
+             ========================================== -->
+
+        <section id="admin_sections">
+
+            <div class="admin_section">
+
+                <h2>👥 Usuários</h2>
+
+                <p>
+                    Visualize os usuários cadastrados na loja.
+                </p>
+
+                <button id="ver_usuarios_button">
+                    Ver usuários
+                </button>
+
+            </div>
+
+
+            <div class="admin_section">
+
+                <h2>📦 Pedidos</h2>
+
+                <p>
+                    Consulte os pedidos e atualize seus status.
+                </p>
+
+                <button id="ver_pedidos_button">
+                    Ver pedidos
+                </button>
+
+            </div>
+
+
+            <div class="admin_section">
+                <h2>🧁 Produtos</h2>
+
+                <p>
+                    Gerencie os produtos disponíveis no cardápio.
+                </p>
+
+                <button id="ver_produtos_button">
+                    Gerenciar produtos
+                </button>
+            </div>
+
+
+            <div class="admin_section">
+
+                <h2>💰 Vendas</h2>
+
+                <p>
+                    Consulte informações sobre as vendas realizadas.
+                </p>
+
+                <button id="ver_vendas_button">
+                    Ver vendas
+                </button>
+
+            </div>
+
+        </section>
+
+            <!-- ==========================================
+                ÁREA DE USUÁRIOS
+                ========================================== -->
+
+            <section id="users_section">
+
+                <h2>Usuários cadastrados</h2>
+
+                <div class="table_container">
+
+                    <table id="users_table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Telefone</th>
+                                <th>Data de cadastro</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="users_table_body">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <button id="fechar_usuarios_button">
+                    Fechar
+                </button>
+
+            </section>
+
+            <!-- ==========================================
+            ÁREA DE PEDIDOS
+            ========================================== -->
+
+            <section
+                id="orders_section"
+                style="display: none;"
+            >
+
+                <h2>Pedidos realizados</h2>
+
+                <div class="table_container">
+
+                    <table id="orders_table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Data</th>
+                                <th>Total</th>
+                                <th>Pagamento</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="orders_table_body">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <button id="fechar_pedidos_button">
+                    Fechar
+                </button>
+
+            </section>
+
+            <!-- ==========================================
+            DETALHES DO PEDIDO
+            ========================================== -->
+
+            <section
+                id="order_details_section"
+                style="display: none;"
+            >
+
+                <h2>Detalhes do pedido</h2>
+
+                <div id="order_details_content">
+                    <!-- Os detalhes serão preenchidos pelo JavaScript -->
+                </div>
+
+            <!-- ==========================================
+                ALTERAR STATUS DO PEDIDO
+                ========================================== -->
+
+                <div id="alterar_status_pedido">
+
+                    <h3>
+                        Alterar status do pedido
+                    </h3>
+
+                    <select id="status_pedido">
+
+                        <option value="Pedido realizado">
+                            Pedido realizado
+                        </option>
+
+                        <option value="Em preparação">
+                            Em preparação
+                        </option>
+
+                        <option value="Saiu para entrega">
+                            Saiu para entrega
+                        </option>
+
+                        <option value="Entregue">
+                            Entregue
+                        </option>
+
+                        <option value="Pedido Cancelado">
+                            Pedido Cancelado
+                        </option>
+
+                    </select>
+
+                    <button
+                        type="button"
+                        id="salvar_status_pedido_button"
+                    >
+                        Salvar status
+                    </button>
+
+                    <p
+                        id="status_pedido_message"
+                        style="display: none;"
+                    ></p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="fechar_detalhes_pedido_button"
+                >
+                    Fechar
+                </button>
+
+            </section>
+
+            <!-- ==========================================
+                ÁREA DE PRODUTOS
+                ========================================== -->
+
+            <section id="products_section">
+
+                <h2>Produtos cadastrados</h2>
+
+                <button id="novo_produto_button">
+                    Cadastrar novo produto
+                </button>
+
+                <div id="new_product_section">
+
+                    <h3>Cadastrar novo produto</h3>
+
+                    <form id="new_product_form">
+
+                        <div class="new_input_box">
+
+                            <label for="new_product_name">
+                                Nome
+                            </label>
+
+                            <input
+                                type="text"
+                                id="new_product_name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="new_input_box">
+
+                            <label for="new_product_description">
+                                Descrição
+                            </label>
+
+                            <textarea
+                                id="new_product_description"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="new_input_box">
+
+                            <label for="new_product_price">
+                                Preço
+                            </label>
+
+                            <input
+                                type="number"
+                                id="new_product_price"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="new_input_box">
+
+                            <label for="new_product_image">
+                                Imagem do produto
+                            </label>
+
+                            <input
+                                type="file"
+                                id="new_product_image"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+
+                        <div class="new_buttons">
+
+                            <button
+                                type="submit"
+                                id="save_new_product_button"
+                            >
+                                Cadastrar produto
+                            </button>
+
+                            <button
+                                type="button"
+                                id="cancel_new_product_button"
+                            >
+                                Cancelar
+                            </button>
+
+                        </div>
+
+
+                        <p id="new_product_message"></p>
+
+                    </form>
+
+                </div>
+
+                <p id="status_product_message"></p>
+
+                <div class="table_container">
+
+                    <table id="products_table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th>Imagem</th>
+                                <th>Status</th>
+                                <th>Data de cadastro</th>
+                                <th>Ações</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="products_table_body">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <button id="fechar_produtos_button">
+                    Fechar
+                </button>
+
+                <!-- ==========================================
+                    FORMULÁRIO DE EDIÇÃO DE PRODUTO
+                    ========================================== -->
+
+                <div id="edit_product_section">
+
+                    <h3>Editar produto</h3>
+
+                    <form id="edit_product_form">
+
+                        <input
+                            type="hidden"
+                            id="edit_product_id"
+                        >
+
+                        <div class="edit_input_box">
+
+                            <label for="edit_product_name">
+                                Nome
+                            </label>
+
+                            <input
+                                type="text"
+                                id="edit_product_name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="edit_input_box">
+
+                            <label for="edit_product_description">
+                                Descrição
+                            </label>
+
+                            <textarea
+                                id="edit_product_description"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="edit_input_box">
+
+                            <label for="edit_product_price">
+                                Preço
+                            </label>
+
+                            <input
+                                type="number"
+                                id="edit_product_price"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="edit_input_box">
+
+                            <label for="edit_product_image">
+                                Imagem
+                            </label>
+
+                            <input
+                                type="file"
+                                id="edit_product_image"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+
+                        <div class="edit_buttons">
+
+                            <button
+                                type="submit"
+                                id="save_product_button"
+                            >
+                                Salvar alterações
+                            </button>
+
+                            <button
+                                type="button"
+                                id="cancel_edit_button"
+                            >
+                                Cancelar
+                            </button>
+
+                        </div>
+
+                        <p id="edit_product_message"></p>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+            ÁREA DE VENDAS
+            ========================================== -->
+
+            <section
+                id="sales_section"
+                style="display: none;"
+            >
+
+                <h2>Vendas realizadas</h2>
+
+                <div class="table_container">
+
+                    <table id="sales_table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Data</th>
+                                <th>Pagamento</th>
+                                <th>Total</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="sales_table_body">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="monthly_sales_total">
+
+                    <span id="monthly_sales_label">
+                        Faturamento do mês:
+                    </span>
+
+                    <strong id="monthly_sales_value">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+                <div class="monthly_sales_filter">
+
+                    <label for="monthly_sales_month">
+                        Consultar faturamento do mês:
+                    </label>
+
+                    <select id="monthly_sales_month">
+
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+
+                    </select>
+
+                    <label for="monthly_sales_year">
+                        Ano:
+                    </label>
+
+                    <select id="monthly_sales_year">
+                    </select>
+
+                </div>
+
+
+                <!-- ==========================================
+                    PRODUTOS MAIS VENDIDOS
+                    ========================================== -->
+
+                <div id="best_selling_products">
+
+                    <h2>Produtos mais vendidos</h2>
+
+                    <div class="table_container">
+
+                        <table id="best_selling_table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Produto</th>
+                                    <th>Quantidade vendida</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="best_selling_table_body">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <button id="fechar_vendas_button">
+                    Fechar
+                </button>
+
+            </section>
+
+
+    </main>
+
+
+    <script src="src/javascript/admin-dashboard.js"></script>
+
+</body>
+
+</html>

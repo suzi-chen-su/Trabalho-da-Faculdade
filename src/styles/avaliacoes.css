@@ -1,0 +1,363 @@
+#testimonials {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#testimonials_content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#feedbacks {
+    display: flex;
+    gap: 20px;
+
+    margin-top: 30px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 30px 30px 15px;
+
+    background-color: #fff8f5;
+    border-radius: 25px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.feedback {
+    flex: 0 0 350px;
+
+    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
+
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    text-align: left;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.feedback:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.feedback-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: 100%;
+}
+
+.feedback-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #5a2115;
+}
+
+.feedback-user i {
+    font-size: 1.1rem;
+}
+
+.feedback-stars {
+    color: #e6a23c;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.feedback-comment {
+    color: rgba(50, 0, 0, 0.7);
+
+    line-height: 1.6;
+
+    margin: 0 0 12px;
+}
+
+.feedback small {
+    color: rgba(50, 0, 0, 0.45);
+
+    font-size: 0.8rem;
+}
+
+#feedbacks::-webkit-scrollbar {
+    height: 14px;
+}
+
+#feedbacks::-webkit-scrollbar-track {
+    background: #f1dfd8;
+    border-radius: 10px;
+}
+
+#feedbacks::-webkit-scrollbar-thumb {
+    background: #b87562;
+    border-radius: 10px;
+}
+
+#feedbacks::-webkit-scrollbar-thumb:hover {
+    background: #8f4f3e;
+}
+
+#static_feedbacks,
+#user_feedbacks {
+    display: contents;
+}
+
+@media screen and (max-width: 768px) {
+
+    #feedbacks {
+        gap: 15px;
+        padding: 20px 15px 15px;
+        border-radius: 18px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .feedback {
+        flex: 0 0 85%;
+        width: 85%;
+        min-width: 85%;
+        max-width: 85%;
+
+        padding: 20px;
+
+        border-radius: 16px;
+
+        scroll-snap-align: start;
+    }
+
+    .feedback-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    }
+
+    .feedback-user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .feedback-user strong {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+    .feedback-stars {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
+
+
+    .feedback-comment {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+}
+
+#review_form {
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+#review_form h3 {
+    color: #5a2115;
+    margin-bottom: 8px;
+}
+
+#review_form p {
+    color: rgba(50, 0, 0, 0.65);
+    margin-bottom: 20px;
+}
+
+#rating {
+    margin-bottom: 20px;
+}
+
+.star {
+    background: none;
+    border: none;
+
+    font-size: 2rem;
+
+    color: #ddd;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.star:hover {
+    transform: scale(1.1);
+}
+
+.star.selected {
+    color: #e6a23c;
+}
+
+#review_comment {
+    width: 100%;
+    min-height: 120px;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    resize: vertical;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+}
+
+#review_comment:focus {
+    outline: none;
+    border-color: #a44e4e;
+}
+
+#rating_summary {
+    width: 100%;
+    max-width: 420px;
+    margin: 30px auto 40px;
+    padding: 22px 30px;
+
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    text-align: center;
+}
+
+#average_rating {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #5a2115;
+}
+
+#average_stars {
+    color: #e6a23c;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+#review_count {
+    font-size: 0.9rem;
+    color: rgba(50, 0, 0, 0.6);
+}
+
+.feedback-product {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* ==================================
+   BOTÃO LOGIN PARA AVALIAR
+================================== */
+
+.btn-login-review {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 20px;
+
+    background-color: rgb(164, 78, 78);
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.btn-login-review:hover {
+    background-color: rgb(250, 81, 115);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.btn-login-review i {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 450px) {
+
+    #rating_summary {
+        width: calc(100% - 20px);
+        max-width: 420px;
+        padding: 18px 15px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    #average_rating {
+        font-size: 2rem;
+    }
+
+    #average_stars {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+
+    #review_count {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+
+}

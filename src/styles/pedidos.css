@@ -1,0 +1,570 @@
+.orders-container {
+    min-height: 100vh;
+    padding: 50px 8%;
+    background-color: #fff9ea;
+}
+
+.orders-card {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.orders-card h1 {
+    text-align: center;
+    color: #5a2115;
+    margin-bottom: 10px;
+}
+
+.orders-welcome {
+    text-align: center;
+    color: rgba(50, 0, 0, 0.65);
+    margin-bottom: 35px;
+}
+
+.order-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-header h2 {
+    margin: 0 0 5px 0;
+    color: #5a2115;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.order-header span {
+    color: rgba(50, 0, 0, 0.6);
+    font-size: 0.9rem;
+}
+
+.order-status {
+    background-color: #f5dfcf;
+    color: #5a2115 !important;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.order-items {
+    padding: 15px 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-item-info strong {
+    color: #5a2115;
+}
+
+.order-item-info span {
+    color: rgba(50, 0, 0, 0.6);
+    font-size: 0.9rem;
+}
+
+.order-item > strong {
+    color: #5a2115;
+}
+
+.order-total {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 15px;
+    font-size: 1.1rem;
+}
+
+.order-total > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.order-total > div:first-child {
+    padding-bottom: 10px;
+}
+
+.order-total > div:last-child {
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee;
+}
+
+
+.order-total > div:first-child {
+    font-size: 0.9rem;
+}
+
+.order-total > div:first-child strong {
+    font-size: 0.9rem;
+}
+
+.no-orders {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-orders h2 {
+    color: #5a2115;
+    margin-bottom: 10px;
+}
+
+.no-orders p {
+    color: rgba(50, 0, 0, 0.65);
+    margin-bottom: 25px;
+}
+
+.no-orders .btn-default {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 24px;
+
+    background-color: #804337;
+    color: white;
+
+    border: none;
+    border-radius: 25px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 10px rgba(90, 33, 21, 0.18);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 14px rgba(90, 33, 21, 0.25);
+
+    background-color: #7a3020;
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+.order-item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.btn-review-product {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    background-color: #804337;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-review-product:hover {
+    background-color: #7a3020;
+    transform: translateY(-2px);
+}
+
+.orders-mobile-header {
+    display: none;
+}
+
+/* ==================================
+   ACOMPANHAMENTO DO PEDIDO
+================================== */
+
+.order-tracking {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff9ea;
+    border-radius: 12px;
+}
+
+.order-tracking h3 {
+    margin: 0 0 25px 0;
+    color: #5a2115;
+    font-size: 1rem;
+}
+
+
+/* ==================================
+   LINHA DE ACOMPANHAMENTO
+================================== */
+
+.tracking-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* ==================================
+   ETAPA
+================================== */
+
+.tracking-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 100px;
+    position: relative;
+}
+
+
+/* ==================================
+   ÍCONE
+================================== */
+
+.tracking-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background-color: #eeeeee;
+    color: #999999;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border: 2px solid #eeeeee;
+
+    box-sizing: border-box;
+}
+
+
+/* ==================================
+   TEXTO DA ETAPA
+================================== */
+
+.tracking-step span {
+    margin-top: 8px;
+
+    color: #999999;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* ==================================
+   LINHA ENTRE AS ETAPAS
+================================== */
+
+.tracking-line {
+    flex: 1;
+
+    height: 3px;
+
+    margin-top: 15px;
+
+    background-color: #eeeeee;
+
+    min-width: 30px;
+}
+
+
+/* ==================================
+   ETAPAS CONCLUÍDAS
+================================== */
+
+.tracking-step.completed .tracking-icon {
+    background-color: #804337;
+    border-color: #804337;
+    color: #ffffff;
+}
+
+.tracking-step.completed span {
+    color: #804337;
+}
+
+.tracking-line.completed {
+    background-color: #804337;
+}
+
+
+/* ==================================
+   ETAPA ATUAL
+================================== */
+
+.tracking-step.current .tracking-icon {
+    background-color: #a44e4e;
+    border-color: #a44e4e;
+    color: #ffffff;
+
+    box-shadow: 0 0 0 5px rgba(164, 78, 78, 0.15);
+}
+
+.tracking-step.current span {
+    color: #5a2115;
+    font-weight: 700;
+}
+
+
+/* ==================================
+   PEDIDO CANCELADO
+================================== */
+
+.order-tracking.cancelled {
+    background-color: #fff5f5;
+}
+
+.tracking-step.cancelled .tracking-icon {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    color: #ffffff;
+}
+
+.tracking-step.cancelled span {
+    color: #c0392b;
+    font-weight: 700;
+}
+
+/* ==================================
+   RESPONSIVIDADE - CELULAR
+================================== */
+
+@media (max-width: 768px) {
+
+    .order-status {
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .order-item {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .order-item-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .order-item-info strong {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .order-item-info span {
+        font-size: 0.9rem;
+    }
+
+    .order-item-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* Oculta o subtotal do produto no mobile */
+    .order-item-actions > strong {
+        display: none;
+    }
+
+    .btn-review-product {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orders-title-desktop {
+        display: none;
+    }
+
+    .orders-mobile-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+
+        width: 100%;
+        margin: 0 0 25px 0;
+        padding: 10px 20px;
+
+        background-color: #5a201533;
+    }
+
+    .orders-mobile-header h1 {
+        margin: 0;
+        padding: 0;
+
+        font-size: 1.2rem;
+        color: #5a2115;
+
+        line-height: 1;
+        text-align: left;
+    }
+
+    .orders-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 35px;
+        height: 35px;
+
+        flex-shrink: 0;
+
+        color: #5a2115;
+        text-decoration: none;
+
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1;
+
+        cursor: pointer;
+    }
+
+    .orders-buttons {
+        display: none;
+        }
+        
+    .orders-container {
+        padding: 0;
+    }
+
+    .orders-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ==================================
+    ACOMPANHAMENTO - CELULAR
+    ================================== */
+
+    .order-tracking {
+        padding: 15px;
+    }
+
+    .order-tracking h3 {
+        margin-bottom: 20px;
+    }
+
+
+    /* ==================================
+    ETAPAS
+    ================================== */
+
+    .tracking-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .tracking-step {
+        min-width: 0;
+        width: 25%;
+    }
+
+    .tracking-step span {
+        font-size: 10px;
+    }
+
+
+    /* ==================================
+    ÍCONES
+    ================================== */
+
+    .tracking-icon {
+        width: 28px;
+        height: 28px;
+
+        font-size: 12px;
+    }
+
+
+    /* ==================================
+    LINHAS
+    ================================== */
+
+    .tracking-line {
+        min-width: 10px;
+        height: 2px;
+        margin-top: 13px;
+    }
+
+    /* ==================================
+    VALORES DO PEDIDO - CELULAR
+    ================================== */
+
+    .order-total {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .order-total > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .order-total > div:first-child {
+        padding-bottom: 5px;
+    }
+
+    .order-total > div:last-child {
+        padding-top: 10px;
+        border-top: 1px solid #eeeeee;
+    }
+
+}

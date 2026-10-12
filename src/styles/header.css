@@ -1,0 +1,344 @@
+header{
+    width: 100%;
+    padding: 28px 8% ;
+    position: sticky;
+    top: 0;
+    background-color: #fff9ea;
+    z-index: 3;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_logo{
+    font-size: 25px;
+    color: rgb(164, 78, 78);
+
+    white-space: nowrap;
+}
+
+#nav_list{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: rgba(50, 0, 0, 0.66);
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: rgb(164, 78, 78);
+}
+
+.nav-item.active a {
+    color: rgb(59, 15, 3);
+    border-bottom: 3px solid #a34040a1;
+}
+
+#mobile_btn {
+    display: none;
+        border: none;
+
+    background-color: transparent;
+
+    color: #5a2115;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    padding: 8px;
+
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease;
+}
+
+#mobile_btn:hover {
+    background-color: #f5dfcf;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    #nav_list {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+    #mobile_menu {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    #navbar {
+        flex-wrap: wrap;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 12px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    }
+
+    #mobile_user_menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #logged_user_menu_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    #user_dropdown_mobile {
+        top: calc(100% + 8px);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 190px;
+    }
+
+    #user_button_mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
+    #user_logged_mobile {
+        color: #a44e4e;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    #logout_btn_mobile {
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.cart-btn {
+    position: relative;
+}
+
+
+#cart_count,
+#cart_count_mobile {
+    position: absolute;
+
+    top: -8px;
+    right: -8px;
+
+    width: 22px;
+    height: 22px;
+
+    background-color: #e91e63;
+    color: white !important;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    z-index: 10;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: inherit;
+}
+
+#user_logged,
+#user_logged_mobile {
+    color: #a44e4e;
+    font-weight: 600;
+}
+
+#logout_btn,
+#logout_btn_mobile {
+    border: none;
+    cursor: pointer;
+}
+
+/* ==================================
+   MENU DO USUÁRIO
+================================== */
+
+#logged_user_menu,
+#logged_user_menu_mobile {
+    position: relative;
+}
+
+
+/* ==================================
+   BOTÕES DO HEADER
+================================== */
+
+#user_button,
+#user_button_mobile,
+.login-btn,
+.cart-btn {
+    background-color: transparent;
+    color: #5a2115;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+}
+
+
+/* Efeito ao passar o mouse */
+
+#user_button:hover,
+#user_button_mobile:hover,
+.login-btn:hover,
+.cart-btn:hover {
+    background-color: #f5dfcf;
+}
+
+
+/* Ícones */
+
+#user_button i,
+#user_button_mobile i,
+.login-btn i,
+.cart-btn i {
+    color: #5a2115;
+}
+
+
+/* MENU SUSPENSO */
+
+#user_dropdown,
+#user_dropdown_mobile {
+    display: none;
+
+    position: absolute;
+
+    top: calc(100% + 10px);
+    right: 0;
+
+    min-width: 190px;
+
+    background-color: #fff9ea;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    padding: 8px;
+
+    z-index: 20;
+}
+
+
+/* LINKS DO MENU */
+
+#user_dropdown a,
+#user_dropdown button,
+#user_dropdown_mobile a,
+#user_dropdown_mobile button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border: none;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    color: rgba(50, 0, 0, 0.75);
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+
+    text-align: left;
+}
+
+
+/* HOVER */
+
+#user_dropdown a:hover,
+#user_dropdown button:hover,
+#user_dropdown_mobile a:hover,
+#user_dropdown_mobile button:hover {
+
+    background-color: #f5dfcf;
+
+}
+
+#user_button,
+#user_button_mobile {
+    color: #5a2115;
+    font-weight: 600;
+}
+
+#user_button,
+#user_button i,
+#user_button span,
+#user_button_mobile,
+#user_button_mobile i,
+#user_button_mobile span {
+    color: #5a2115;
+}

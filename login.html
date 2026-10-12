@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Delícia de Cupcakes</title>
+
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/login.css">
+
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <h1>Bem-vindo de volta!</h1>
+
+            <p>
+                Entre na sua conta para continuar.
+            </p>
+
+
+            <form id="login_form">
+
+                <div class="form-group">
+
+                    <label for="login_email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="login_email"
+                        placeholder="seuemail@email.com">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="login_senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="login_senha"
+                        placeholder="Digite sua senha">
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-default"
+                    id="login_btn">
+
+                    Entrar
+
+                </button>
+
+            </form>
+
+
+            <p class="cadastro-link">
+
+                Ainda não possui uma conta?
+
+                <a href="cadastro.html">
+                    Cadastre-se
+                </a>
+
+            </p>
+
+
+            <a href="index.html" class="voltar">
+                ← Voltar para a página inicial
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"
+            integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+    </script>
+
+    <script src="src/javascript/login.js"></script>
+
+</body>
+
+</html>

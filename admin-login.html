@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Administrativo - Delícia de Cupcakes</title>
+
+    <link rel="stylesheet" href="src/styles/admin-login.css">
+</head>
+
+<body>
+
+    <main id="admin_login">
+
+        <div class="login_container">
+
+            <h1>Área Administrativa</h1>
+
+            <p class="subtitle">
+                Delícia de Cupcakes
+            </p>
+
+            <form id="admin_login_form">
+
+                <div class="input_box">
+                    <label for="admin_email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="admin_email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="input_box">
+                    <label for="admin_senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="admin_senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="admin_login_button">
+                    Entrar
+                </button>
+
+                <p id="login_message"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="src/javascript/admin-login.js"></script>
+
+</body>
+
+</html>

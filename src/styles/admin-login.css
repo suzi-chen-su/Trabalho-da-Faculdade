@@ -1,0 +1,140 @@
+/* ==========================================
+   LOGIN ADMINISTRATIVO
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff9ea;
+}
+
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+   ========================================== */
+
+#admin_login {
+    width: 100%;
+    padding: 20px;
+}
+
+.login_container {
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto;
+    padding: 40px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   TÍTULO
+   ========================================== */
+
+.login_container h1 {
+    color: #a44e4e;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   CAMPOS
+   ========================================== */
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.input_box label {
+    color: #3b0f03;
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.input_box input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 1rem;
+}
+
+.input_box input:focus {
+    border-color: #a44e4e;
+}
+
+
+/* ==========================================
+   BOTÃO
+   ========================================== */
+
+#admin_login_button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #a44e4e;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#admin_login_button:hover {
+    background-color: #873b3b;
+}
+
+
+/* ==========================================
+   MENSAGEM
+   ========================================== */
+
+#login_message {
+    margin-top: 15px;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Delícia de Cupcakes</title>
+
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/cadastro.css">
+
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <section class="cadastro-card">
+
+            <h1>Crie sua conta </h1>
+
+            <p>
+                Cadastre-se para fazer seus pedidos
+                na Delícia de Cupcakes.
+            </p>
+
+
+            <form id="cadastro_form">
+
+                <div class="form-group">
+
+                    <label for="cadastro_nome">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cadastro_nome"
+                        placeholder="Digite seu nome completo">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="cadastro_email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="cadastro_email"
+                        placeholder="seuemail@email.com">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="cadastro_telefone">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="cadastro_telefone"
+                        placeholder="(19) 99999-9999"
+                        maxlength="15">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="cadastro_senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="cadastro_senha"
+                        placeholder="Digite sua senha">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="cadastro_confirmar_senha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="cadastro_confirmar_senha"
+                        placeholder="Digite a senha novamente">
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-default"
+                    id="cadastro_btn">
+
+                    Criar minha conta
+
+                </button>
+
+            </form>
+
+
+            <p class="login-link">
+
+                Já possui uma conta?
+
+                <a href="login.html">
+                    Entre aqui
+                </a>
+
+            </p>
+
+
+            <a href="index.html" class="voltar">
+                ← Voltar para a página inicial
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"
+            integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+    </script>
+
+    <script src="src/javascript/cadastro.js"></script>
+
+</body>
+
+</html>

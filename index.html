@@ -1,39 +1,412 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho - Cupcake Shop</title>
-    <link rel="stylesheet" href="carrinho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/menu.css">
+    <link rel="stylesheet" href="src/styles/cart.css">
+    <link rel="stylesheet" href="src/styles/cadastro.css">
+    <link rel="stylesheet" href="src/styles/conta.css">
+    <link rel="stylesheet" href="src/styles/avaliacoes.css">
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Delícia de Cupcakes</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <img src="../capcake_logo.png" alt="Logo Cupcake Shop" class="logo">
-            <a href="../produtos/produtos.html" class="site-title">Cupcake BR</a>
-            <a href="../produtos/produtos.html">Produtos</a>
-            <a href="../login/login.html">Login</a>
-            <button id="logoutBtn" class="nav-link" style="display: none;">Logout</button>
-        </nav>
-    </header>
 
-    <h1>Carrinho de Compras</h1>
+<header>
+    <nav id="navbar">
 
-    <div id="carrinho-container">
-        <!-- Produtos do carrinho serão carregados aqui dinamicamente -->
+        <i class="fa-brands fa-web-awesome" id="nav_logo">CUPCAKES</i>
+
+        <ul id="nav_list">
+            <li class="nav-item active">
+                <a href="#home">Início</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#menu">Cardápio</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#testimonials">Avaliações</a>
+            </li>
+
+            <li id="user_menu">
+
+                <a href="cadastro.html"
+                class="btn-default login-btn">
+                    Entre ou Cadastre-se
+                </a>
+
+                <div id="logged_user_menu" style="display: none;">
+
+                    <button id="user_button" class="btn-default">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span id="user_logged"></span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                    <div id="user_dropdown">
+
+                        <a href="conta.html">
+                            <i class="fa-solid fa-user"></i>
+                            Minha conta
+                        </a>
+
+                        <a href="pedidos.html">
+                            <i class="fa-solid fa-box"></i>
+                            Minhas compras
+                        </a>
+
+                        <button id="logout_btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Sair
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </li>
+
+            <li>
+            <button class="btn-default cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart_count">0</span>
+            </button>
+            </li>
+
+        </ul>
+
+        <button id="mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    
+                <!-- Menu que aparece no celular -->
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+
+                <li id="mobile_user_menu">
+
+                    <a href="cadastro.html"
+                    class="btn-default login-btn">
+                        Entre ou Cadastre-se
+                    </a>
+
+                    <div id="logged_user_menu_mobile" style="display: none;">
+
+                        <button id="user_button_mobile" class="btn-default">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <span id="user_logged_mobile"></span>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+                        <div id="user_dropdown_mobile">
+
+                            <a href="conta.html">
+                                <i class="fa-solid fa-user"></i>
+                                Minha conta
+                            </a>
+
+                            <a href="pedidos.html">
+                                <i class="fa-solid fa-box"></i>
+                                Minhas compras
+                            </a>
+
+                            <button id="logout_btn_mobile">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Sair
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <button class="btn-default cart-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart_count_mobile">0</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    Delícia de Cupcakes feitos para
+                    <span>você</span>
+                </h1>
+
+                <p class="description">
+                    A Delícia de Cupcakes é uma loja virtual especializada na venda de cupcakes artesanais, preparados com ingredientes selecionados, muito carinho e criatividade. Nosso site oferece uma variedade de sabores e opções para diferentes ocasiões, permitindo que o cliente conheça os produtos, escolha seus favoritos e realize seu pedido de forma rápida, prática e segura.
+                </p>
+
+                <div id="cta_buttons">
+
+                    <a href="#menu" class="btn-default">
+                        Ver cardápio
+                    </a>
+
+                    <a href="tel:+5519991919191"
+                    id="phone_button"
+                    class="btn-default">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>(19) 99191-9191</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div id="banner">
+                <img src="src/images/cupcake2.jpg" alt="">
+
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Cupcakes</h3>
+
+            <div id="dishes">
+            </div>
+            
+        <section id="testimonials">
+
+            <div id="testimonials_content">
+
+                <h2 class="section-title">
+                    Avaliações
+                </h2>
+
+                <h3 class="section-subtitle">
+                    Confira a opinião de quem já comprou:
+                </h3>
+
+                <div id="rating_summary">
+
+                    <strong id="average_rating">
+                        0,0
+                    </strong>
+
+                    <div id="average_stars">
+                        ☆☆☆☆☆
+                    </div>
+
+                    <span id="review_count">
+                        0 avaliações
+                    </span>
+
+                </div>
+
+                <div id="feedbacks">
+
+                    <!-- AVALIAÇÕES FIXAS -->
+                    <div id="static_feedbacks">
+
+                        <div class="feedback">
+
+                            <div class="feedback-header">
+
+                                <div class="feedback-user">
+                                    <i class="fa-solid fa-user"></i>
+
+                                    <strong>
+                                        Maria Edudarda de Oliveira
+                                    </strong>
+                                </div>
+                                <div><strong> Cupcake Red Velvet</strong></div>
+
+                                <div class="feedback-stars">
+                                    ★★★★★
+                                </div>
+
+                            </div>
+
+                            <p class="feedback-comment">
+                                Os cupcakes são maravilhosos! A massa é
+                                muito macia e o sabor é incrível.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feedback">
+
+                            <div class="feedback-header">
+
+                                <div class="feedback-user">
+                                    <i class="fa-solid fa-user"></i>
+
+                                    <strong>
+                                        Ana
+                                    </strong>
+                                </div>
+                                <div><strong> Cupcake Morango com Creme</strong></div>
+
+                                <div class="feedback-stars">
+                                    ★★★★★
+                                </div>
+
+                            </div>
+
+                            <p class="feedback-comment">
+                                Adorei o cupcake de morango com creme.
+                                Muito saboroso e delicado!
+                            </p>
+
+                        </div>
+
+
+                        <div class="feedback">
+
+                            <div class="feedback-header">
+
+                                <div class="feedback-user">
+                                    <i class="fa-solid fa-user"></i>
+
+                                    <strong>
+                                        Carlos
+                                    </strong>
+                                </div>
+                                <div><strong> Cupcake de Chocolate</strong></div>
+
+                                <div class="feedback-stars">
+                                    ★★★★★
+                                </div>
+
+                            </div>
+
+                            <p class="feedback-comment">
+                                O cupcake estava delicioso e chegou
+                                muito bem preparado.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!----- AVALIAÇÕES DOS USUÁRIOS ----->
+                    <div id="user_feedbacks"></div>
+
+                </div>
+
+
+                <div id="review_form">
+
+                    <h3>Deixe sua avaliação</h3>
+
+                    <p>
+                        Conte para nós como foi sua experiência:
+                    </p>
+
+                    <div id="product_to_review"></div>
+
+                    <div id="rating">
+
+                        <button type="button" class="star" data-rating="1">★</button>
+                        <button type="button" class="star" data-rating="2">★</button>
+                        <button type="button" class="star" data-rating="3">★</button>
+                        <button type="button" class="star" data-rating="4">★</button>
+                        <button type="button" class="star" data-rating="5">★</button>
+
+                    </div>
+
+                    <textarea
+                        id="review_comment"
+                        placeholder="Escreva sua avaliação..."
+                        maxlength="300"></textarea>
+
+                    <button
+                        type="button"
+                        id="submit_review"
+                        class="btn-default">
+
+                        Enviar avaliação
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="src/javascript/script.js"></script>
+    <script src="src/javascript/avaliacoes.js"></script>
+
+        <!-- CARRINHO -->
+    <div id="cart_container">
+
+        <div id="cart_header">
+            <h2>Meu Carrinho</h2>
+
+            <button id="close_cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="cart_items">
+            <!-- Os produtos serão inseridos aqui pelo JavaScript -->
+        </div>
+
+        <div id="cart_footer">
+
+            <div id="cart_total">
+                <span>Total:</span>
+                <strong>R$ 0,00</strong>
+            </div>
+
+            <button id="checkout_btn" class="btn-default">
+                Finalizar pedido
+            </button>
+
+        </div>
+
     </div>
 
-    <!-- Botão Finalizar Compra, inicialmente escondido -->
-    <div id="finalizar-compra-container" style="display: none;">
-        <a href="../checkout/checkout.html">
-            <button class="btn-finalizar-compra">Finalizar Compra</button>
-        </a>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
 
-    <footer>
-        <p>&copy; 2024 Cupcake BR</p>
-    </footer>
-
-    <script src="carrinho.js"></script>
 </body>
 </html>
