@@ -122,7 +122,7 @@ Para executar o sistema web, será necessário instalar:
 Clone este repositório utilizando o Git:
 
 ```bash
-git clone https://github.com/suzi-chen-su/Trabalho-PIT-II.git
+git clone https://github.com/suzi-chen-su/Trabalho-da-Faculdade.git
 ```
 
 Depois, acesse a pasta do projeto:
