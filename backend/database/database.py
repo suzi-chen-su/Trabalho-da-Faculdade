@@ -72,8 +72,7 @@ def criar_tabelas():
             descricao TEXT NOT NULL,
             preco REAL NOT NULL,
             imagem TEXT,
-            ativo INTEGER DEFAULT 1,
-            data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            ativo INTEGER DEFAULT 1
         )
     """)
 

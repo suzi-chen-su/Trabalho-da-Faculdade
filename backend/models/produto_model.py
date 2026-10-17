@@ -97,8 +97,7 @@ def buscar_produto_por_id(id_produto):
             descricao,
             preco,
             imagem,
-            ativo,
-            data_cadastro
+            ativo            
         FROM produtos
         WHERE id = ?
     """, (id_produto,))
@@ -129,8 +128,7 @@ def listar_produtos():
             descricao,
             preco,
             imagem,
-            ativo,
-            data_cadastro
+            ativo
         FROM produtos
         ORDER BY id DESC
     """)

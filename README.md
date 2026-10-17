@@ -18,6 +18,13 @@ O projeto foi pensado e desenvolvido tendo em mente uma aplicação web funciona
 
 Da perspectiva acadêmica, o objetivo foi alcançado, pois foram aplicaddos vários conceitos aprendidos durante o curso de Engenharia de Software para esse projeto, como conhecimento de desenvolvimento web, integração entre frontend e backend, banco de dados e organização de software utilizando o padrão arquitetural MVC e conceitos de metodologias ágeis.
 
+## Documentação
+
+A documentação e os testes do projeto estão disponíveis na pasta **docs**, e possui os seguintes documentos em pdf:
+
+- Documentação do banco de dados;
+- Testes de verificação e validação;
+- Testes realizados com usuários.
 
 ## Funcionalidades
 ### Área do Cliente
@@ -159,8 +166,8 @@ Para executar o frontend utilizando o Live Server, é necessário configurar o H
 ### 4. Executar o frontend com Live Server
 
 No Visual Studio Code, localize os arquivos:
-- src/index.html
-- src/admin-login.html
+- Trabalho-PIT-II\index.html
+- Trabalho-PIT-II\admin-login.html
 
 Clique com o botão direito sobre o arquivo e selecione:
 - Open with Live Server

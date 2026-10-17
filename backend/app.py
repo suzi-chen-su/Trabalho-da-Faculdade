@@ -214,8 +214,7 @@ def listar_produtos_cadastrados():
             "descricao": produto["descricao"],
             "preco": produto["preco"],
             "imagem": produto["imagem"],
-            "ativo": produto["ativo"],
-            "data_cadastro": produto["data_cadastro"]
+            "ativo": produto["ativo"]          
         })
 
     return jsonify(lista_produtos)

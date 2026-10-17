@@ -238,7 +238,7 @@ async function carregarProdutos() {
                     </span>
                 </td>
 
-                <td>${produto.data_cadastro}</td>
+                
 
                 <td>
 
@@ -1651,7 +1651,7 @@ async function carregarDetalhesPedido(idPedido) {
                     <div class="pedido_dado">
 
                         <strong>
-                            Data e hora
+                            Data do pedido
                         </strong>
 
                         <span>
