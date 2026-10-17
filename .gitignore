@@ -16,3 +16,6 @@ Thumbs.db
 
 # Arquivos secretos
 .env
+
+# Backup local do banco de dados
+backend/database/delicia_cupcakes_antes_restauracao.db
