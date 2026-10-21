@@ -82,7 +82,6 @@ A documentação e os testes do projeto estão disponíveis na pasta **docs**, e
 - Flask
 - Flask-CORS
 - SQLite
-- Arquitetura MVC
 
 ### Ferramentas
 - Visual Studio Code (VSCode)
