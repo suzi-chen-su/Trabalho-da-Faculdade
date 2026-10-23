@@ -87,7 +87,6 @@ A documentação e os testes do projeto estão disponíveis na pasta **docs**, e
 - Visual Studio Code (VSCode)
 - Git
 - GitHub
-- Jira
 - Live Server
 
 ## Arquitetura
